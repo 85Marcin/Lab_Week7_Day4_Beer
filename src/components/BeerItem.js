@@ -1,10 +1,13 @@
 import React from 'react';
 
 
-const BeerItem = ({beerAsAProp}) => {
+const BeerItem = ({beerAsAProp, setSelectedBeerAsAProp}) => {
+    const handleClick = () => {
+        setSelectedBeerAsAProp(beerAsAProp)
+    }
 
     return (
-        <li>
+        <li onClick={handleClick}>
             {beerAsAProp.name}
         </li>
     )
